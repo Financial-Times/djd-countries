@@ -5,7 +5,7 @@
   "main": "src/index.ts",
   "scripts": {
     "test": "jest",
-    "build": "pika build"
+    "build": "pika pack"
   },
   "keywords": [
     "financial times",
