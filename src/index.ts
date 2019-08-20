@@ -6,7 +6,7 @@
 import data from "./data";
 
 class Country {
-  country = null;
+  country: ICountry | null = null;
 
   constructor(id: string) {
     this.country = data.find(
@@ -23,35 +23,35 @@ class Country {
     if (!this.country) throw new Error("Country not found");
   }
 
-  static byIso3(code) {
+  static byIso3(code: string) {
     return (
       data.find(({ iso3 }) => code.toLowerCase() === iso3.toLowerCase()) ||
       new Error("Country not found")
     );
   }
 
-  static byIso(code) {
+  static byIso(code: string) {
     return (
       data.find(({ iso3 }) => code.toLowerCase() === iso3.toLowerCase()) ||
       new Error("Country not found")
     );
   }
 
-  static byCode(code) {
+  static byCode(code: string) {
     return (
       data.find(({ iso3 }) => code.toLowerCase() === iso3.toLowerCase()) ||
       new Error("Country not found")
     );
   }
 
-  static byIso2(code) {
+  static byIso2(code: string) {
     return (
       data.find(({ iso2 }) => code.toLowerCase() === iso2.toLowerCase()) ||
       new Error("Country not found")
     );
   }
 
-  static byName(identifier) {
+  static byName(identifier: string) {
     return (
       data.find(
         ({ name }) => name.toLowerCase() === identifier.toLowerCase()
@@ -59,7 +59,7 @@ class Country {
     );
   }
 
-  static byRegion(identifier) {
+  static byRegion(identifier: string) {
     return (
       data.filter(
         ({ ftRegion }) => ftRegion.toLowerCase() === identifier.toLowerCase()
@@ -67,7 +67,7 @@ class Country {
     );
   }
 
-  static byFTRegion(identifier) {
+  static byFTRegion(identifier: string) {
     return (
       data.filter(
         ({ ftRegion }) => ftRegion.toLowerCase() === identifier.toLowerCase()
@@ -75,7 +75,7 @@ class Country {
     );
   }
 
-  static byWorldBankRegion(identifier) {
+  static byWorldBankRegion(identifier: string) {
     return (
       data.filter(
         ({ worldBankRegion }) =>
@@ -119,3 +119,10 @@ class Country {
 
 export default Country;
 export { data };
+export interface ICountry {
+  iso3: string;
+  iso2: string;
+  name: string;
+  worldBankRegion: string;
+  ftRegion: string;
+}

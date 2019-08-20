@@ -3,7 +3,7 @@
  * Jest tests for Country class
  */
 
-import Country from "./";
+import Country from "./index";
 
 test("Available via constructor", () => {
   const canada = new Country("CA");
