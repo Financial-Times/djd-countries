@@ -7,6 +7,11 @@
     "test": "jest",
     "build": "pika build"
   },
+  "homepage": "https://github.com/Financial-Times/djd-countries",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Financial-Times/djd-countries.git"
+  },
   "keywords": [
     "financial times",
     "data"
