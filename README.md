@@ -38,3 +38,4 @@ test("Available via static methods", () => {
   expect(expected).toEqual(byCode);
 });
 ```
+test
